@@ -16,12 +16,13 @@ class PyamentProcessing extends StatefulWidget {
 
 class _PyamentProcessingState extends State<PyamentProcessing> {
   void verifyOnServer() async {
+    String token = 'YOUR TOKEN';
     final paymentRef = widget.reference;
     String url = 'https://api.paystack.co/transaction/verify/$paymentRef';
     Map<String, String> headers = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Bearer sk_test_6ed5df9f0a0ac777a2c75b3f557511a6cfe8fd8b'
+      'Authorization': 'Bearer $token'
     };
     http.Response response = await http.get(Uri.parse(url), headers: headers);
     final Map body = json.decode(response.body);

@@ -16,7 +16,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
   TextEditingController amountController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 
-  String publicKey = 'pk_test_b720acb86cd9116f8886ed20bcb3402a3561e5ab';
+  String publicKey = 'YOUR PUBLIC KEY';
   final plugin = PaystackPlugin();
   String successMessage = '';
 
